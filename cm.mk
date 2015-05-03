@@ -38,6 +38,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=cancro PRODUCT_NAME=cancro
 
+TARGET_UNOFFICIAL_BUILD_ID := Opticancro
+
 TARGET_CONTINUOUS_SPLASH_ENABLED := true
 
 ## Use the latest approved GMS identifiers unless running a signed build
