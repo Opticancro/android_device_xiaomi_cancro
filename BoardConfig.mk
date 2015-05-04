@@ -195,8 +195,6 @@ TARGET_PROVIDES_CONSUMERIR_HAL := true
 # Simple time service client
 BOARD_USES_QC_TIME_SERVICES := true
 
-# Logging
-TARGET_USES_LOGD := false
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
