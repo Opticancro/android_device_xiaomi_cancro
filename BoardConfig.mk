@@ -133,13 +133,23 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 393216000
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 16384000
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-# Recovery
-TARGET_RECOVERY_FSTAB            := $(CANCRO_PATH)/rootdir/root/fstab.qcom
-RECOVERY_FSTAB_VERSION           := 2
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-BOARD_NATIVE_DUALBOOT := true
-BOARD_NATIVE_DUALBOOT_SINGLEDATA := true
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+# TWRP recovery configuration
+DEVICE_RESOLUTION                       := 1080x1920
+BOARD_HAS_NO_REAL_SDCARD                := true
+BOARD_RECOVERY_SWIPE                    := true
+BOARD_SUPPRESS_SECURE_ERASE             := true
+BOARD_SUPPRESS_EMMC_WIPE                := true
+RECOVERY_GRAPHICS_USE_LINELENGTH        := true
+RECOVERY_FSTAB_VERSION                  := 2
+RECOVERY_SDCARD_ON_DATA                 := true
+TARGET_RECOVERY_PIXEL_FORMAT            := "RGBX_8888"
+TARGET_RECOVERY_FSTAB                   := $(CANCRO_PATH)/rootdir/root/fstab.qcom
+TARGET_RECOVERY_LCD_BACKLIGHT_PATH      := "/sys/class/leds/lcd-backlight/brightness"
+TARGET_RECOVERY_QCOM_RTC_FIX            := true
+TW_INCLUDE_CRYPTO                       := true
+TW_NO_SCREEN_TIMEOUT                    := true
+TW_NO_SCREEN_BLANK                      := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID  := true
 
 USE_CHINESE_RECOVERY := false
 ifneq ($(USE_CHINESE_RECOVERY),true)
