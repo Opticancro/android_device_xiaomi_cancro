@@ -1,3 +1,6 @@
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product-if-exists, vendor/qcom/Android.mk)
+
 # Common QCOM configuration tools
 $(call inherit-product, device/qcom/common/Android.mk)
 
@@ -234,11 +237,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVdecHevc \
     libOmxVenc \
-    libstagefrighthw \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += qcmediaplayer
-
+    libstagefrighthw
+	
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
